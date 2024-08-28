@@ -78,7 +78,7 @@ export function setupSubmit(element: HTMLButtonElement) {
     const value = document.querySelector<HTMLFormElement>("#input1")?.value;
     const key = document.querySelector<HTMLFormElement>("#input2")?.value;
     const callback_gas_limit =
-    500000; 
+    5000000; 
 
     const data = JSON.stringify({
       value: value,
