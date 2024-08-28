@@ -4,6 +4,7 @@ import { setupSubmit } from './submit'
 import { Buffer } from 'buffer';
 import { SecretNetworkClient } from 'secretjs'; 
 
+// Polyfill Buffer for browser environment
 window.Buffer = Buffer;
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
@@ -30,24 +31,27 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
     <h2>Sample Application: Key Value Store using Encrypted Payloads</h2>
     <div id="form">
-      <button id="submit">Submit</button>
       <form name="inputForm">
-      <br>
-      <label for="input1">Value</label>
-      <input type="string" value="string you want to encrypt" id="input1" name="input1"/>
-      <br>
-      <br>
-      <label for="input2">Key</label>
-      <input type="string" value="key to set value" id="input2" name="input2" />
-      <br>
-      <br>
-      <label for="revealKey">Key to Reveal Value</label> <!-- New input for revealing the value -->
-      <input type="string" value="key to query value" id="revealKey" name="revealKey" />
-      <br>
-      <div style="text-align: center;"> <!-- Centering the button -->
-        <button id="reveal" style="margin-top: 20px;">Reveal Value</button> <!-- Button to trigger the reveal -->
-      </div>
-      <br>
+        <br>
+        <label for="input1">Value</label>
+        <input type="string" value="string you want to encrypt" id="input1" name="input1"/>
+        <br>
+        <br>
+        <label for="input2">Key</label>
+        <input type="string" value="key to set value" id="input2" name="input2" />
+        <br>
+        <div style="text-align: center;"> <!-- Centering the button -->
+          <button id="submit" style="width: 150px; margin-top: 20px;">Submit</button> <!-- Submit button -->
+        </div>
+        <br>
+        <label for="revealKey">Key to Reveal Value</label>
+        <input type="string" value="key to query value" id="revealKey" name="revealKey" />
+        <br>
+        <div style="text-align: center;"> <!-- Centering the button -->
+          <button id="reveal" style="width: 150px; margin-top: 20px;">Reveal Value</button> <!-- Reveal Value button -->
+        </div>
+        <br>
+      </form>
     </div>
     <div id="preview" style="word-wrap: break-word;">
     </div>
@@ -84,8 +88,8 @@ const revealValue = async () => {
   }
 };
 
-
+// Add event listener to the reveal button
 document.querySelector<HTMLButtonElement>('#reveal')!.addEventListener('click', (event) => {
-  event.preventDefault(); 
+  event.preventDefault(); // Prevent form submission
   revealValue();
 });
