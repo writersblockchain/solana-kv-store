@@ -2,7 +2,7 @@ import './style.css'
 import { setupConnect } from './connect'
 import { setupSubmit } from './submit'
 import { Buffer } from 'buffer';
-import { SecretNetworkClient } from 'secretjs'; // Import SecretNetworkClient for querying
+import { SecretNetworkClient } from 'secretjs'; 
 
 window.Buffer = Buffer;
 
@@ -80,7 +80,7 @@ const revealValue = async () => {
     const result = JSON.stringify(query_tx, null, 2); // Stringify the entire query_tx object
     document.querySelector<HTMLDivElement>('#decryptedValue')!.innerText = `Query Result: ${result}`;
   } catch (error) {
-    document.querySelector<HTMLDivElement>('#decryptedValue')!.innerText = `Error: ${error.message}`;
+    document.querySelector<HTMLDivElement>('#decryptedValue')!.innerText = `Error: query unsuccessful!`;
   }
 };
 
