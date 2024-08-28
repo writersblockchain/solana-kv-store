@@ -38,7 +38,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       <br>
       <br>
       <label for="input2">Key</label>
-      <input type="string" value="key to query your encrypted value" id="input2" name="input2" />
+      <input type="string" value="key to query value" id="input2" name="input2" />
       <br>
 
     </div>
