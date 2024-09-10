@@ -9,7 +9,7 @@ window.Buffer = Buffer;
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 <header>
-  <h1>Secret Network for Solana</h1>
+  <h1>Key Value Store for Solana</h1>
   <div id="links">
     <a href="https://uploads-ssl.webflow.com/632b43ea48475213272bcef4/632dd73d6dfc1b0cba06bbd6_Snakepath_whitepaper.pdf" target="_blank">
     <div class="card">
@@ -21,7 +21,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       GitHub
     </div>
     </a>
-    <a href="https://docs.scrt.network/secret-network-documentation/development/ethereum-evm-developer-toolkit/connecting-evm-with-snakepath" target="_blank">
+    <a href="https://docs.scrt.network/secret-network-documentation/confidential-computing-layer/solana-developer-toolkit" target="_blank">
     <div class="card">
       Docs
     </div>
@@ -29,23 +29,23 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   </div>
 </header>
   <div>
-    <h2>Sample Application: Key Value Store using Encrypted Payloads</h2>
     <div id="form">
       <form name="inputForm">
         <br>
         <label for="input1">Value</label>
-        <input type="string" value="string you want to encrypt" id="input1" name="input1"/>
+        <input type="string" placeholder="string you want to encrypt"
+   name="input1"/>
         <br>
         <br>
         <label for="input2">Key</label>
-        <input type="string" value="key to set value" id="input2" name="input2" />
+        <input type="string" placeholder="password to decrypt string" id="input2" name="input2" />
         <br>
         <div style="text-align: center;"> <!-- Centering the button -->
           <button id="submit" style="width: 150px; margin-top: 20px;">Submit</button> <!-- Submit button -->
         </div>
         <br>
         <label for="revealKey">Key to Reveal Value</label>
-        <input type="string" value="key to query value" id="revealKey" name="revealKey" />
+        <input type="string" placeholder="password to decrypt string" id="revealKey" name="revealKey" />
         <br>
         <div style="text-align: center;"> <!-- Centering the button -->
           <button id="reveal" style="width: 150px; margin-top: 20px;">Reveal Value</button> <!-- Reveal Value button -->
