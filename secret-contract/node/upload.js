@@ -9,11 +9,11 @@ const wallet = new Wallet(
 
 const contract_wasm = fs.readFileSync("../contract.wasm.gz");
 
-const gatewayAddress = "secret1drjkzeg2x0yyt927zpggnx289aj7ptcq4w6gw3"
+const gatewayAddress = "secret10ex7r7c4y704xyu086lf74ymhrqhypayfk7fkj"
 
-const gatewayHash = "dfa2af6f3c1dae11343169466fd936db8cefd5cf4955afd73d778597ec2390a6"
+const gatewayHash = "012dd8efab9526dec294b6898c812ef6f6ad853e32172788f54ef3c305c1ecc5"
 
-const gatewayPublicKey = "0x04f0c3e600c7f7b3c483debe8f98a839c2d93230d8f857b3c298dc8763c208afcd62dcb34c9306302bf790d8c669674a57defa44c6a95b183d94f2e645526ffe5e"
+const gatewayPublicKey = "0x046d0aac3ef10e69055e934ca899f508ba516832dc74aa4ed4d741052ed5a568774d99d3bfed641a7935ae73aac8e34938db747c2f0e8b2aa95c25d069a575cc8b"
 
 const gatewayPublicKeyBytes = Buffer.from(
   gatewayPublicKey.substring(2),
