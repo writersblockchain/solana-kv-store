@@ -66,9 +66,10 @@ setupConnect(document.querySelector<HTMLButtonElement>('#connect')!)
 // Function to handle the decryption and display the JSON stringified result
 const revealValue = async () => {
   const key = document.querySelector<HTMLInputElement>('#revealKey')!.value;
-
-  const routing_contract = "secret1p0zdxcnllslmajawwag7wxrf83th83k7asyfqr";
-  const routing_code_hash = "3d250d179d27d98c918ec4ee82d8f7e298b70748362d54093d1658fb9754635a";
+  
+  const routing_contract = "secret1yx6nc4scrky982l9gqmukwakkt9gne7ymkff65"; //the contract you want to call in secret
+  const routing_code_hash =
+    "3d250d179d27d98c918ec4ee82d8f7e298b70748362d54093d1658fb9754635a"; 
 
   const secretjs = new SecretNetworkClient({
     url: "https://lcd.testnet.secretsaturn.net",
