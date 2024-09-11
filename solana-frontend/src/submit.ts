@@ -78,7 +78,7 @@ export function setupSubmit(element: HTMLButtonElement) {
     const value = document.querySelector<HTMLFormElement>("#input1")?.value;
     const key = document.querySelector<HTMLFormElement>("#input2")?.value;
     const callback_gas_limit =
-    5000000; 
+    50000000; 
 
     const data = JSON.stringify({
       value: value,
@@ -264,8 +264,8 @@ export function setupSubmit(element: HTMLButtonElement) {
         </p>
 
         <h2>Transaction Parameters</h2>
-        <p><b>Tx Hash: </b><a href="https://solscan.io/tx/${signature}?cluster=devnet" target="_blank">${signature}</a></p>
-        <p><b>Gateway Address (to check the postExecution callback) </b><a href="https://solscan.io/account/${
+        <p><b>Tx Hash: </b><a href="https://explorer.solana.com/tx/${signature}?cluster=devnet" target="_blank">${signature}</a></p>
+        <p><b>Gateway Address (to check the postExecution callback) </b><a href="https://explorer.solana.com/address/${
           program.programId
         }?cluster=devnet" target="_blank">${program.programId}</a></p>
         `;
