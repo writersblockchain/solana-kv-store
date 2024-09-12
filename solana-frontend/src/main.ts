@@ -33,12 +33,11 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       <form name="inputForm">
         <br>
         <label for="input1">Value</label>
-        <input type="string" placeholder="string you want to encrypt"
-   name="input1"/>
+     <input type="text" placeholder="string you want to encrypt" id="input1" name="input1" />
         <br>
         <br>
         <label for="input2">Key</label>
-        <input type="string" placeholder="password to decrypt string" id="input2" name="input2" />
+        <input type="text" placeholder="password to decrypt string" id="input2" name="input2" />
         <br>
         <div style="text-align: center;"> <!-- Centering the button -->
           <button id="submit" style="width: 150px; margin-top: 20px;">Submit</button> <!-- Submit button -->
@@ -67,7 +66,7 @@ setupConnect(document.querySelector<HTMLButtonElement>('#connect')!)
 const revealValue = async () => {
   const key = document.querySelector<HTMLInputElement>('#revealKey')!.value;
 
-  const routing_contract = "secret1crhp2xhtxz29a0ktnujehy4svnp0c432tnvrvj"; //the contract you want to call in secret
+  const routing_contract = "secret13pg2jqscdpn5lm26wnee84462xrnrywaf64fuu"; //the contract you want to call in secret
   const routing_code_hash =
     "80ab314558ae2ebfddb0aa1ac4eed30633ac67f633a0c07315044618194016ff"; 
 

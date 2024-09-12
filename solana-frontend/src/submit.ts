@@ -19,10 +19,10 @@ export function setupSubmit(element: HTMLButtonElement) {
   const task_destination_network = "pulsar-3";
 
   //Gateway Encryption key for ChaCha20-Poly1305 Payload encryption
-  const gatewayPublicKey = "A20KrD7xDmkFXpNMqJn1CLpRaDLcdKpO1NdBBS7VpWh3";
+  const gatewayPublicKey = "AvDD5gDH97PEg96+j5ioOcLZMjDY+Fezwpjch2PCCK/N";
   const gatewayPublicKeyBytes = base64_to_bytes(gatewayPublicKey);
 
-  const routing_contract = "secret1crhp2xhtxz29a0ktnujehy4svnp0c432tnvrvj"; //the contract you want to call in secret
+  const routing_contract = "secret13pg2jqscdpn5lm26wnee84462xrnrywaf64fuu"; //the contract you want to call in secret
   const routing_code_hash =
     "80ab314558ae2ebfddb0aa1ac4eed30633ac67f633a0c07315044618194016ff"; //its codehash
 
@@ -76,6 +76,7 @@ export function setupSubmit(element: HTMLButtonElement) {
     );
 
     const value = document.querySelector<HTMLFormElement>("#input1")?.value;
+    // const value = "password";
     const key = document.querySelector<HTMLFormElement>("#input2")?.value;
     const callback_gas_limit =
     5000000; 
@@ -84,6 +85,8 @@ export function setupSubmit(element: HTMLButtonElement) {
       value: value,
       key : key,
     });
+
+   console.log("data:", data)
 
     // Derive the Gateway PDA / Programm Derived Address
     const [gateway_pda, gateway_bump] = web3.PublicKey.findProgramAddressSync(
