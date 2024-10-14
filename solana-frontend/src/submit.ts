@@ -19,10 +19,10 @@ export function setupSubmit(element: HTMLButtonElement) {
   const task_destination_network = "pulsar-3";
 
   //Gateway Encryption key for ChaCha20-Poly1305 Payload encryption
-  const gatewayPublicKey = "AvDD5gDH97PEg96+j5ioOcLZMjDY+Fezwpjch2PCCK/N";
+  const gatewayPublicKey = "A20KrD7xDmkFXpNMqJn1CLpRaDLcdKpO1NdBBS7VpWh3";
   const gatewayPublicKeyBytes = base64_to_bytes(gatewayPublicKey);
 
-  const routing_contract = "secret13pg2jqscdpn5lm26wnee84462xrnrywaf64fuu"; //the contract you want to call in secret
+  const routing_contract = "secret1zu50r5hvapweta9ywht74vxc6tjks9k3rdj6j6"; //the contract you want to call in secret
   const routing_code_hash =
     "80ab314558ae2ebfddb0aa1ac4eed30633ac67f633a0c07315044618194016ff"; //its codehash
 
