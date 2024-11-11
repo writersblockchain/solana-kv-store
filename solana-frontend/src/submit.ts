@@ -22,9 +22,9 @@ export function setupSubmit(element: HTMLButtonElement) {
   const gatewayPublicKey = "A20KrD7xDmkFXpNMqJn1CLpRaDLcdKpO1NdBBS7VpWh3";
   const gatewayPublicKeyBytes = base64_to_bytes(gatewayPublicKey);
 
-  const routing_contract = "secret1zu50r5hvapweta9ywht74vxc6tjks9k3rdj6j6"; //the contract you want to call in secret
+  const routing_contract = "secret1hrxkku28erknrtwqqqmkewgv58zn2jmn4graqe"; //the contract you want to call in secret
   const routing_code_hash =
-    "80ab314558ae2ebfddb0aa1ac4eed30633ac67f633a0c07315044618194016ff"; //its codehash
+    "65ad9426b642f9384f320cb13db09d0761514203d22767ab52d3940b2b304484"; //its codehash
 
   element.addEventListener("click", async function (event: Event) {
     event.preventDefault();
