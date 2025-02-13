@@ -71,7 +71,7 @@ const revealValue = async () => {
     "65ad9426b642f9384f320cb13db09d0761514203d22767ab52d3940b2b304484"; 
 
   const secretjs = new SecretNetworkClient({
-    url: "https://lcd.testnet.secretsaturn.net",
+    url: "https://pulsar.lcd.secretnodes.com",
     chainId: "pulsar-3",
   });
 
