@@ -8,7 +8,7 @@ let query = async () => {
   const key = "password";
 
   const secretjs = new SecretNetworkClient({
-    url: "https://lcd.testnet.secretsaturn.net",
+    url: "https://pulsar.lcd.secretnodes.com",
     chainId: "pulsar-3",
   });
 
